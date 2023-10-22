@@ -242,8 +242,119 @@ header .master_play img{
 
 header .master_play h5{
    width: 130px;
-   border: 1px solid #fff;
+   /* border: 1px solid #fff; */
    margin-left: 15px;
    color: #fff;
    line-height: 17px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   font-size: 13px;
+}
+
+header .master_play h5 .subtitle{
+    font-size: 11px;
+    color: #4c5262;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+ }
+
+ header .master_play .icon{
+    font-size: 20px;
+    color: #fff;
+    margin: 0px 20px 0px 40px;
+    outline: none;
+    display: flex;
+    align-items: center;
+ }
+
+ header .master_play .icon .bi{
+    outline: none;
+    cursor: pointer;
+ }
+
+ header .master_play .icon .shuffle{
+    font-size: 12px;
+    margin-right: 10px;
+    overflow: hidden;
+    width: 17.5px;
+    display: flex;
+    align-items: center;
+}
+
+ header .master_play .icon #download_music {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+ header .master_play .icon .bi:nth-child(3){
+    border: 1px solid rgb(105, 105, 105, .2);
+    border-radius: 50%;
+    padding: 1px 5px 0px 7px;
+    margin: 0px 5px;
+}
+
+ header .master_play span{
+    color: #fff;
+    width: 32px;
+    /* border: 1px solid #fff; */
+    font-size: 11px;
+    font-weight: 400;
+}
+
+ header .master_play #currentStart{
+    margin: 0px 0px 0px 20px;
+}
+
+ header .master_play .bar{
+    position: relative;
+    width: 43%;
+    height: 2px;
+    background: rgb(105, 105, 170, .2);
+    margin: 0px 15px 0px 10px;
+}
+
+header .master_play .bar .bar2{
+    position: absolute;
+    background: #36e2ec;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    transition: 1s linear;
+}
+
+header .master_play .bar .dot{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #36e2ec;
+    border-radius: 50%;
+    left: 0;
+    top: -1.5px;
+    transition: 1s linear;
+}
+
+header .master_play .bar .dot::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #36e2ec;
+    border-radius: 50%;
+    left: -7px;
+    top: -6.5px;
+    box-shadow: inset 0px 0px 3px #36e2ec;
+}
+
+header .master_play .bar input{
+    position: absolute;
+    width: 100%;
+    top: -7px;
+    left: 0;
+    cursor: pointer;
+    z-index: 10000;
+    /* transition: 3s linear; */
+    opacity: 0;
 }
